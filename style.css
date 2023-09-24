@@ -1,0 +1,514 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.4;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Navigation */
+.main-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.5rem;
+  }
+
+.logo {
+    max-width: 150px;
+    position: relative;
+}
+
+.toggle {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 30px;
+    height: 30px;
+    background: url(\Praktikum\Images\menu.png) no-repeat center center;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.toggle.show {
+    position: fixed;
+    background: url(\Praktikum\Images\menu.png) no-repeat center center;
+    background-size: 25px;
+}
+
+.navbar {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .navbar.show {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: initial;
+  }
+  
+  .navbar ul {
+    background: #e51e2a;
+    opacity: 0.99;
+    height: 100vh;
+  }
+  
+  .navbar li {
+    margin-bottom: 2rem;
+  }
+  .navbar a {
+    color: #fff;
+    padding: 1rem;
+    white-space: nowrap;
+    transition: 0.3s ease;
+  }
+
+.navbar a:hover {
+    opacity: 0.5;
+}
+
+/* Showcase */
+.showcase {
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 0 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #161616;
+}
+
+.showcase .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e51e2a;
+    clip-path: circle(75% at right -20%);
+}
+
+.showcase .content {
+    position: relative;
+    width: 100%;
+  }
+  
+  .showcase .textbox {
+    position: relative;
+    width: 100%;
+    color: #fff;
+    margin-top: 7rem;
+  }
+  
+  .showcase .textbox h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .showcase .textbox p {
+    margin: 1rem 0;
+  }
+
+.content .textbox a {
+    color: white;
+    background-color: #e51e2a;
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    transition: 0.4s transform, opacity ease;
+}
+
+.content .textbox a:hover {
+    opacity: 0.9;
+    transform: scale(0.9);
+}
+
+.content .imgbox {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content .imgbox img {
+    max-width: 100px;
+}
+
+/* Slider */
+.slider-container {
+    width: 100%;
+    padding-top: 50px 0;
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    box-sizing: content-box;
+}
+
+.content .imgbox {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  
+.content .imgbox img {
+    max-width: 85px;
+}
+
+.slide img {
+    position: relative;
+    bottom: 0;
+    max-height: 100%;
+}
+
+.slide {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Section More */
+.more {
+    padding: 1rem 0;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 3rem;
+}
+
+.more h3 {
+    border-left: 5px solid #e51e2a;
+    padding-left: 1rem;
+    color: #333;
+    margin: 2rem 0 1rem;
+}
+
+.more .item {
+    margin: 1.5rem;
+}
+
+.more .item > div {
+    overflow: hidden;
+}
+
+.more .item a{
+    padding: 0 1rem;
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.more .item img {
+    width: 100%;
+    transition: 1s ease;
+    transform-origin: left center;
+}
+
+.more .item img:hover {
+    transform: scale(1.1);
+}
+
+.more-content {
+    display: flex;
+    justify-content: center;
+}
+
+.more-content .item a {
+    color: #000;
+}
+
+.arrow-icon {
+    content: "";
+    background-image: url(https://cocacola-landing-page-clone.netlify.app/img/arrow.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    height: 20px;
+    margin-left: 0.3rem;
+    padding: 0;
+    vertical-align: middle;
+    width: 18px;
+    margin-bottom: 2px;
+    transition: 0.3s margin-left ease-in-out;
+}
+
+/* Drinks */
+.drinks {
+    padding-top: 1rem;
+    align-items: flex-end;
+  }
+
+.drinks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 2rem;
+}
+
+  .drink {
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .drink a {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .drink img {
+    height: 50%;
+    object-fit: contain;
+    transition: 1s ease;
+    cursor: pointer;
+  }
+  
+  .drink img:hover {
+    transform: scale(1.1);
+  }
+
+/* Footer */
+.main-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+.footer-top {
+    display: flex;
+}
+
+.main-footer .logo {
+    padding-bottom: 1rem;
+}
+
+.main-footer .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 0.9rem;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    padding: 1rem;
+    width: 100vw;
+}
+
+.main-footer a {
+    color: white;
+}
+
+.main-footer .links a {
+    border-right: 1px solid white;
+    padding: 0 1rem;
+    font-weight: 400;
+}
+
+.main-footer .footer-bottom {
+    padding: 1rem 0;
+    display: flex;
+}
+
+.social-nav {
+    width: 100%;
+}
+
+.social-links {
+    position: relative;
+    bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-left: 15px;
+    background-color: #222;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+}
+
+.social-links a:hover {
+    background-color: #e51e2a;
+    transform: translateY(-10px);
+}
+
+.social-links a img {
+    filter: invert(1);
+    transform: scale(0.5);
+}
+
+@media (min-width: 768px) {
+    .main-header {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 2.5rem 4.25rem;
+    }
+  
+    .toggle {
+      display: none;
+    }
+  
+    .main-nav {
+      width: auto;
+      height: auto;
+      display: initial;
+    }
+  
+    .main-nav.show {
+      position: initial;
+      width: auto;
+    }
+  
+    .main-nav ul {
+      width: auto;
+      height: auto;
+      flex-direction: row;
+    }
+  
+    .main-nav li {
+      margin-bottom: 0;
+    }
+  
+    /* Showcase */
+    .showcase {
+      padding: 2.5rem 4.25rem;
+    }
+  
+    .showcase .content {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .showcase .textbox {
+      max-width: 600px;
+      margin-right: 1rem;
+    }
+  
+    .content .imgbox {
+      max-width: 450px;
+    }
+  
+    .showcase .textbox {
+      margin-top: 5rem;
+    }
+    .showcase .textbox h2 {
+      font-size: 2.5rem;
+    }
+  
+    .slider-container {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    .slider-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        z-index: 1;
+        box-sizing: content-box;
+    }
+    
+    .slide img {
+        position: absolute;
+        bottom: 0;
+        max-height: 100%;
+    }
+    
+    .slide {
+        width: 500px;
+        height: 310px;
+        margin-right: 30px;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+    }  
+    /* Section More */
+    .more-content {
+      flex-direction: row;
+      gap: 2rem;
+      align-items: flex-end;
+    }
+  
+    .more-content .item {
+      width: 300px;
+      height: 200px;
+    }
+  
+    /* drinks */
+    .drinks {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+    .drink img {
+      width: 40%;
+    }
+    /* footer */
+    .main-footer .footer-top,
+    .main-footer .footer-bottom {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .footer-bottom .social-nav {
+      order: 1;
+    }
+  
+    .main-footer .links {
+      border: none;
+      white-space: nowrap;
+    }
+  
+    .main-footer .social-links img {
+      width: 3.5rem;
+    }
+  
+    .main-footer .footer-bottom {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .main-header,
+    .showcase {
+      padding: 2.5rem 6.25rem;
+    }
+  
+    .content .imgbox {
+      max-width: 500px;
+    }
+  }
